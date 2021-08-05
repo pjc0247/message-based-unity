@@ -29,7 +29,7 @@ class ActiveTowerUI : Subscriber
     // some handsome code goes here that rebuilds inventory ui
   }
 
-  [Subscriber(typeof(ActiveTowerInventoryChangeMessage))]
+  [Subscribe(typeof(ActiveTowerInventoryChangeMessage))]
   private void OnActiveTowerInventoryChange(ActiveTowerInventoryChangeMessage message)
   {
     RebuildInventory();
@@ -42,7 +42,7 @@ class ActiveTowerUI : Subscriber
 ```cs
 class ActiveTowerUI : Subscriber
 {
-  [Subscriber(typeof(ActiveTowerInventoryChangeMessage))]
+  [Subscribe(typeof(ActiveTowerInventoryChangeMessage))]
   private void RebuildInventory()
   {
     // some handsome code goes here that rebuilds inventory ui
@@ -74,7 +74,7 @@ public class InventoryUI : MonoBehaviour
 ```cs
 class Tower : Subscriber
 {
-  [Subscriber(typeof(WaveEndMessage))]
+  [Subscribe(typeof(WaveEndMessage))]
   private void OnWaveEnd()
   {
     if (isAlive == false)
@@ -118,7 +118,7 @@ class WaveStartMessage {
 ```cs
 class WaveIndicatorUI : Subscriber
 {
-  [Subscriber(typeof(WaveStartMessage))]
+  [Subscribe(typeof(WaveStartMessage))]
   private void OnWaveEnd(WaveStartMessage message)
   {
     Narration.Show($"Wave {message.wave}!");
