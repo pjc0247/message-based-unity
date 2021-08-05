@@ -10,9 +10,9 @@ MessageBasedUnityProgramming
 부모-자식 계층관계가 아닌 UI끼리 변경 감지하기
 ----
 
-<img src="img/1.png" style="width: 480px" />
+<img src="img/1.png" width="360px" />
 
-<img src="img/2.png" style="width: 480px" />
+<img src="img/2.png" width="360px" />
 
 ```cs
 class ActiveTowerUI : Subscriber
@@ -59,7 +59,7 @@ public class InventoryUI : MonoBehaviour
 다수의 서브스크라이버
 ----
 
-<img src="img/3.png" style="width: 320px" />
+<img src="img/3.png" width="240px" />
 
 이 게임에서 타워는 HP가 모두 소진되면 죽은 상태가 되지만, 해당 웨이브가 종료된 시점에서 부활하여 다음 웨이브에 다시 전투에 참전합니다.
 
